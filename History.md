@@ -1,3 +1,44 @@
+5.0.10 / 2018-03-12
+===================
+ * docs(schematype): add notes re: running setters on queries #6209
+ * docs: fix typo #6208 [kamagatos](https://github.com/kamagatos)
+ * fix(query): only call setters once on query filter props for findOneAndUpdate and findOneAndRemove #6203
+ * docs: elaborate on connection string changes in migration guide #6193
+ * fix(document): skip applyDefaults if subdoc is null #6187
+ * docs: fix schematypes docs and link to them #6176
+ * docs(faq): add FAQs re: array defaults and casting aggregation pipelines #6184 #6176 #6170 [lineus](https://github.com/lineus)
+ * fix(document): ensure primitive defaults are set and built-in default functions run before setters #6155
+ * fix(query): handle single embedded embedded discriminators in castForQuery #6027
+
+5.0.9 / 2018-03-05
+==================
+ * perf: bump mongodb -> 3.0.4 to fix SSL perf issue #6065
+
+5.0.8 / 2018-03-03
+==================
+ * docs: remove obsolete references to `emitIndexErrors` #6186 [isaackwan](https://github.com/isaackwan)
+ * fix(query): don't cast findOne() until exec() so setters don't run twice #6157
+ * fix: remove document_provider.web.js file #6186
+ * fix(discriminator): support custom discriminator model names #6100 [wentout](https://github.com/wentout)
+ * fix: support caching calls to `useDb()` #6036 [rocketspacer](https://github.com/rocketspacer)
+ * fix(query): add omitUndefined option so setDefaultsOnInsert can kick in on undefined #6034
+ * fix: upgrade mongodb -> 3.0.3 for reconnectTries: 0 blocking process exit fix #6028
+
+5.0.7 / 2018-02-23
+==================
+ * fix: support eachAsync options with aggregation cursor #6169 #6168 [vichle](https://github.com/vichle)
+ * docs: fix link to MongoDB compound indexes docs #6162 [br0p0p](https://github.com/br0p0p)
+ * docs(aggregate): use eachAsync instead of incorrect `each()` #6160 [simllll](https://github.com/simllll)
+ * chore: fix benchmarks #6158 [pradel](https://github.com/pradel)
+ * docs: remove dead link to old blog post #6154 [markstos](https://github.com/markstos)
+ * fix: don't convert dates to numbers when updating mixed path #6146 #6145 [s4rbagamble](https://github.com/s4rbagamble)
+ * feat(aggregate): add replaceRoot, count, sortByCount helpers #6142 [jakesjews](https://github.com/jakesjews)
+ * fix(document): add includedChildren flag to modifiedPaths() #6134
+ * perf: don't create wrapper function if no hooks specified #6126
+ * fix(schema): allow indexes on single nested subdocs for geoJSON #6113
+ * fix(document): allow depopulating all fields #6073
+ * feat(mongoose): add support for `useFindAndModify` option on singleton #5616
+
 5.0.6 / 2018-02-15
 ==================
  * refactor(query.castUpdate): avoid creating error until necessary #6137
